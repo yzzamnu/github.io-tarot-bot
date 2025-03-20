@@ -1,16 +1,12 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { GlobalStyles } from './styles/GlobalStyles';
-import Spread from './components/Spread';
+import { Routes, Route } from 'react-router-dom';
+import SpreadView from './components/SpreadView';
 
 function App() {
   return (
-    <Router>
-      <GlobalStyles />
-      <Routes>
-        <Route path="/spread/:id" element={<Spread />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/spread/:spreadId" element={<SpreadView />} />
+    </Routes>
   );
 }
 
